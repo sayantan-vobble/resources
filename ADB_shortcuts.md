@@ -1,3 +1,15 @@
+## ADB settings
+
+### Hide system bars
+```
+adb shell settings put global policy_control immersive.full=*
+```
+
+### Show system bars again
+```
+adb shell settings put global policy_control null
+```
+
 ## Open screens through ADB
 
 ### open device admin page
