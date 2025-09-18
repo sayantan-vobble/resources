@@ -10,6 +10,13 @@ adb shell settings put global policy_control immersive.full=*
 adb shell settings put global policy_control null
 ```
 
+### Show / collapse status bar / notification bar
+```
+adb shell cmd statusbar expand-notifications
+adb shell cmd statusbar expand-settings
+adb shell cmd statusbar collapse
+```
+
 ## Open screens through ADB
 
 ### open device admin page
@@ -31,14 +38,14 @@ adb shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS -d package:c
 
 ### Start an app
 ```
-adb shell monkey -p <package_name> -c android.intent.category.LAUNCHER 1
+adb shell monkey -p <package_name> 1
 ```
 Example:
 ```
-adb shell monkey -p com.avievinson.vobble -c android.intent.category.LAUNCHER 1
+adb shell monkey -p com.avievinson.vobble 1
 ```
 ```
-adb shell monkey -p com.avievinson.vobble.vobbledeviceupdater -c android.intent.category.LAUNCHER 1
+adb shell monkey -p com.avievinson.vobble.vobbledeviceupdater 1
 ```
 
 
