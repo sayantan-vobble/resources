@@ -47,6 +47,11 @@ adb shell monkey -p com.avievinson.vobble 1
 ```
 adb shell monkey -p com.avievinson.vobble.vobbledeviceupdater 1
 ```
+### Set density
+Example - set to 240
+```
+adb shell wm density 240
+```
 
 
 ## Get data through ADB
