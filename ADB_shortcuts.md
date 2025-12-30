@@ -19,6 +19,16 @@ adb shell cmd statusbar collapse
 
 ## Open screens through ADB
 
+### Open android settings
+```
+adb shell am start -a android.settings.SETTINGS
+```
+
+### Open Download folder
+```
+adb shell am start -a android.intent.action.VIEW -d content://com.android.providers.downloads.documents/root/downloads
+```
+
 ### open device admin page
 ```
 adb shell am start -n com.android.settings/.DeviceAdminSettings
@@ -53,6 +63,20 @@ Example - set to 240
 adb shell wm density 240
 ```
 
+## Send key events
+
+### Go Back
+```
+adb shell input keyevent KEYCODE_BACK
+```
+### Go home
+```
+adb shell input keyevent KEYCODE_HOME
+```
+### Go to the last app
+```
+adb shell "input keyevent KEYCODE_APP_SWITCH && sleep 0.1 && input keyevent KEYCODE_APP_SWITCH"
+```
 
 ## Get data through ADB
 
