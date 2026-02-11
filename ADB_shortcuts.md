@@ -91,3 +91,8 @@ adb shell dumpsys package com.avievinson.vobble | grep -e "versionCode\|versionN
 ```
 adb shell dumpsys package com.avievinson.vobble.vobbledeviceupdater | grep -e "versionCode\|versionName"
 ```
+## Enable wireless debugging on Android 8
+```
+adb tcpip 5555
+adb connect <device_ip>:5555
+```
